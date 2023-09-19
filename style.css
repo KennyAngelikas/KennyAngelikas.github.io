@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background: #080808;
     color: #fff;
@@ -30,7 +33,6 @@ nav{
 
 .logo{
     width:140px;
-
 }
 
 nav ul li{
@@ -38,7 +40,6 @@ nav ul li{
     margin: 10px 20px;
     list-style: none;
 }
-
 nav ul li a{
     text-decoration: none;
     color: #fff;
@@ -330,4 +331,10 @@ nav .fas{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }
