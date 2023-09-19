@@ -17,7 +17,6 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -29,19 +28,99 @@
 </div>
 
 <!------------------ABOUT------------------>
-<div id="about">
+<div id="About">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
                 <img src="#######" alt="Kenneth Angelikas"> <!--Have to add picture if want-->
             </div>
             <div class="about-col-2">
-                <h1>About Me</h1>
+                <h1 class="subtitle">About Me</h1>
+                <p>Write soemthing about myself</p>
 
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Tools</span><br>Designing Web/App interfaces</li>
+                        <li><span>Fix this</span><br>Designing Web/App interfaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Experience 1</span><br>Designing Web/App interfaces</li>
+                        <li><span>experience 2</span><br>Designing Web/App interfaces</li>
+                        <li><span>ex 3</span><br>Designing Web/App interfaces</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Education</span><br>Designing Web/App interfaces</li>
+                        <li><span>ed 2</span><br>Designing Web/App interfaces</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!------------------PORTFOLIO------------------>
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="#######"> <!--Have to add picture if want-->
+                <div class="layer">
+                    <h3>Project Name</h3>
+                    <p>Project Description</p>
+                    <a href="#">View Details</a>  <!--"fas fa-external-link-alt"-->
+                </div>
+            </div>
+            <div class="work">
+                <img src="#######"> <!--Have to add picture if want-->
+                <div class="layer">
+                    <h3>Project Name</h3>
+                    <p>Project Description</p>
+                    <a href="#">View Details</a>  <!--"fas fa-external-link-alt"-->
+                </div>
+            </div>
+            <div class="work">
+                <img src="#######"> <!--Have to add picture if want-->
+                <div class="layer">
+                    <h3>Project Name</h3>
+                    <p>Project Description</p>
+                    <a href="#">View Details</a>  <!--"fas fa-external-link-alt"-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 
 
 </body>

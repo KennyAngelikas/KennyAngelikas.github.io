@@ -13,7 +13,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/backgorundClimbimg.jpg);
+    background-image: url(#images/backgorundClimbimg.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -91,4 +91,102 @@ nav ul li a:hover::after{   /* hover effect !IS NOT WORKING! */
 .about-col-2{
     flex-basis: 60%;
 } 
-.sub-tit
+.sub-title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    color: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-link.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: nnone;
+    margin: 10 px 0;
+}
+.tab-contents ul li span{
+    color: #ff004f;
+    margin-right: 14px;
+}
+.tab-contents {
+    display: none;
+}
+.tab-contents.active-tab { 
+    display: block;
+}
+
+/* ------------------Portfolio------------------ */
+#portfolio{
+    padding: 50px 0;  
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work-img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+}   
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{ /* this is the link button, if i put it in rn for the words*/
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: 60px;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
